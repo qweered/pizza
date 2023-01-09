@@ -4,7 +4,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface SortState {
   query: string;
   category: number;
-  sortBy: SortByItem;
+  sortBy: any;
   currentPage: number;
 }
 
@@ -38,7 +38,7 @@ export const counterSlice = createSlice({
     setQuery: (state, action: PayloadAction<string>) => {
       state.query = action.payload;
     },
-    setSortBy: (state, action: PayloadAction<SortByItem>) => {
+    setSortBy: (state, action: PayloadAction<any>) => {
       state.sortBy = action.payload;
     },
     setCategory: (state, action: PayloadAction<number>) => {
