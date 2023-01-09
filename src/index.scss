@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lato', sans-serif;
+  @apply bg-amber-50;
+  @apply text-stone-900;
+  @apply pb-7;
+}
+
+.burger {
+  &.active {
+    span {
+      @apply absolute;
+      @apply top-1/2;
+      &:nth-child(1) {
+        @apply -translate-y-1/2;
+        @apply rotate-45;
+      }
+      &:nth-child(2) {
+        @apply -translate-y-1/2;
+        @apply -rotate-45;
+      }
+      &:nth-child(3) {
+        @apply hidden;
+      }
+    }
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
